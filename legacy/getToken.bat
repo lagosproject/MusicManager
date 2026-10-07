@@ -1,0 +1,1 @@
+deezer-oauth <YOUR_APP_ID> <YOUR_APP_SECRET>

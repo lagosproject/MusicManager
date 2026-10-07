@@ -1,0 +1,47 @@
+[project]
+name = "music_manager"
+version = "0.1.0"
+description = "Modern music management tool for Spotify and other services"
+authors = [
+    { name = "Antigravity", email = "antigravity@example.com" }
+]
+dependencies = [
+    "music_core>=0.1.1",
+    "spotipy>=2.25.0",
+    "streamlit>=1.50.0",
+    "pydantic-settings>=2.2.0",
+    "loguru>=0.7.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.2.0",
+    "requests>=2.31.0",
+]
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+# Clasificación por audio (experimental). Requiere ffmpeg en el PATH.
+audio = [
+    "yt-dlp",
+    "shazamio>=0.8.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["music_manager"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+]

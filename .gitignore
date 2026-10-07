@@ -1,0 +1,36 @@
+# Credenciales y secretos
+.env
+.cache
+*.token
+secrets.toml
+headers_auth.json
+
+# Datos locales (cachés, mapeos, token de Spotify)
+data/
+artist_cache.json
+genre_playlist_mapping.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.pytest_cache/
+
+# IDEs y herramientas locales
+.vscode/
+.idea/
+.agents/
+.claude/
+
+# Temporales
+scratch/
+temp/
+temp_audio/
+*.tmp
+*.log
+
+# Ficheros locales del código antiguo
+datos_tidal.json
